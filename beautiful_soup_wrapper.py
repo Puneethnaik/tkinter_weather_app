@@ -9,6 +9,7 @@ class Parser:
         print("refreshing content")
         print("GET " + self.filename)
         self.contents = requests.get(self.filename).text
+        self.extract()
     def extract(self):
         self.soup = BeautifulSoup(self.contents, 'html.parser')#We parse the contents by calling beautiful soup constructor
         # print(self.soup.)
@@ -81,5 +82,3 @@ class Parser:
                     print(child.contents)
                     children.append(child)
         return children
-
-
