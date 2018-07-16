@@ -1,6 +1,6 @@
 from tkinter import *
 from beautiful_soup_wrapper import Parser
-
+#this is the custom frame class
 class CustomFrame(Frame):
     def __init__(self, title, row, column, parent=None):
         Frame.__init__(self, parent)
